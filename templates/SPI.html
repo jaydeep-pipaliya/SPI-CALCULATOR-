@@ -1,0 +1,100 @@
+{% extends "main.html" %} {% block content %}
+<style>
+    #my {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #cars {
+        width: 22%;
+    }
+    
+    label {
+        width: 293px;
+        font-weight: bold;
+        font-size: 24px;
+        margin-bottom: 14px;
+    }
+    
+    #mi {
+        width: 298px;
+        font-size: 19px;
+        margin-top: 16px;
+        font-weight: bold;
+    }
+</style>
+<style>
+    #sub {
+        display: flex;
+    }
+    
+    #p {
+        width: 305px;
+        height: 36px;
+    }
+    
+    #sem {
+        font-size: 34px;
+        margin: 0 auto;
+        width: 100px;
+    }
+    
+    #g {
+        width: 237px;
+        font-size: 27px;
+        margin-bottom: 24px;
+    }
+    
+    #ans {
+        width: 295px;
+        height: 28px;
+        /* text-align: center; */
+        /* align-items: center; */
+        font-size: 18px;
+        background: red;
+    }
+</style>
+{% if t %}
+<form action="/SPI" method="POST" id="my">
+    <label for="cars">Choose a Sem:</label>
+    <select id="cars" name="cars">
+    <option value="SEM1">SEM-1</option>
+    <option value="SEM2">SEM-2</option>
+    <option value="SEM3">SEM-3</option>
+    <option value="SEM4">SEM-4</option>
+    <option value="SEM5">SEM-5</option>
+    <option value="SEM6">SEM-6</option>
+    <option value="SEM7">SEM-7</option>
+    <option value="SEM8">SEM-8</option>
+    </select>
+    <button type="submit" class="btn btn-primary" id="mi">GO</button>
+</form>
+{% elif f%}
+<h1 id="sem">{{s}}</h1>
+<h1 id="g">Choose Greads:</h1>
+<form action="/SPI2" method="POST" id="my">
+    {% for i in range(n) %}
+    <div id="sub">
+        <label for="cars">{{sub[i]}}:</label>
+        <select id="p" name="car2">
+    <option value="AP">A+</option>
+    <option value="A">A</option>
+    <option value="BP">B+</option>
+    <option value="B">B</option>
+    <option value="CP">C+</option>
+    <option value="C">C</option>
+    <option value="FP">F+</option>
+    <option value="F">F</option>
+    </select> </div>
+    {% endfor %}
+
+    <button type="submit" class="btn btn-primary" id="mi">GO</button>
+</form>
+{% else %}
+<form action="/" id="my">
+    <span class="badge badge-primary" id="ans">SPI:{{ans}}</span>
+    <button type="submit" class="btn btn-primary" id="mi">BACK TO HOME</button>
+</form>
+{% endif %} {% endblock %}
