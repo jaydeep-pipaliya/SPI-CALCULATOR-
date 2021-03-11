@@ -1,4 +1,3 @@
-from sre_constants import BRANCH
 import Niram_data as data
 DATA=data.DATA
 
@@ -16,14 +15,12 @@ def Get_Branch_Semester_Data(Branch):
         raise RuntimeError('Branch not found')
 
 
-def Get_Branch_Semester_List():
-    return list(DATA['Chemical Engineering-BCH'].keys())
-
-
+def Get_Branch_Semester_List(Branch='Chemical Engineering-BCH'):
+    return list(DATA[Branch].keys())
 
 
 def Get_Branch_Semester_Sub_List(Branch,Semester):
-    list=Get_Branch_Semester_List(Branch)
+    list=Get_Branch_Semester_Data(Branch)
     # print(list)
     if Semester in list:
         return list[Semester]

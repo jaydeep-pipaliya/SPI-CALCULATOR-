@@ -25,19 +25,26 @@ def Branch():
 def Semester():
     Branch=request.values.get("branch")
     Semester=request.values.get("semester")
-    print(Branch,Semester)
-    # print(request.values)
+    list_sub=d.Get_Branch_Semester_Sub_List(Branch,Semester)
     type='semester'
-    # print("zeel")
-    print(type)
-    return render_template("SPI.html",type=type)
+    return render_template("SPI.html",type=type,branch=Branch,semester=Semester,sublist=list_sub,action='/SPI')
 
-@app.route("/SPI")
+@app.route("/SPI",methods=['POST'])
 def SPI():
     type='spi'
+    # print(request.values.get('branch-sem'))
+    Branch=request.values.get('branch')
+    Semester=request.values.get('sem')
+    Greadlist=request.form.getlist('sublist')
+    # print(sublist)
     # d=request.form.getlist('car2')
-    # a=g.SPI(f,d)
-    return render_template("SPI.html",type=type)
+    # print(Branch,Semester)
+    list_sub=d.Get_Branch_Semester_Sub_List(Branch,Semester)
+    # print(list_sub)
+    a='fail'
+    if "F" not in list_sub:  
+        a=g.SPI(list_sub,Greadlist)
+    return render_template("SPI.html",type=type,result=a)
 app.run(debug=True)
 
 

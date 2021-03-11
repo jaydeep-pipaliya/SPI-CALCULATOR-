@@ -9,6 +9,7 @@
     <!-- <link rel="stylesheet" type="text/css" href="../static/Home.css"> -->
     <link rel="stylesheet" href="{{ url_for('static', filename='Home.css') }}">
 </head>
+
 <body>
     <header>
         <div class="top-headding">Anteryami
@@ -24,73 +25,88 @@
             </div>
         </nav>
     </header>
-<!-- <script>
+    <!-- <script>
     console.log('{{t}}')
 </script> -->
-<div class="container" id="zeel">
-    <div class="text">
-        <div class="card-header" id="zee">
-            SPI CALCULATOR
-        </div>
-        <div class="form">
-
-
-
-
-            {% if 'branch' == type %}
-
-            <form action={{action}} method="POST" class="catainer-form">
-                <div class="section-box">
-                    <label for=branch>Choose a Branch:</label>
-                    <select id="branch" name="branch">
-                        {% for data in branchlist%}
-                        <option value='{{data}}'>{{data}}</option>
-                        {% endfor %}
-                    </select>
-                </div>
-                <div class="section-box">
-                    <label for=semester>Choose a Semester:</label>
-                    <select id="semester" name="semester">
-                        {% for data in semlist %}
-                        <option value='{{data}}''>{{data}}</option>
-                        {% endfor %}
+    <div class="container" id="zeel">
+        <div class="text">
+            <div class="card-header" id="zee">
+                SPI CALCULATOR
+            </div>
+            <div class="form">
+                {% if 'branch' == type %}
+                <form action={{action}} method="POST" class="catainer-form">
+                    <div class="section-box">
+                        <label for=branch>Choose a Branch:</label>
+                        <select id="branch" name="branch">
+                            {% for data in branchlist%}
+                            <option value='{{data}}'>{{data}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="section-box">
+                        <label for=semester>Choose a Semester:</label>
+                        <select id="semester" name="semester">
+                            {% for data in semlist %}
+                            <option value='{{data}}'>{{data}}</option>
+                            {% endfor %}
                     </select>
                 </div>
                 <button type="submit" class="btn">GO</button>
-                <form>
-
-
-
-            {% elif 'semester' == type %}
-            <h1 id={{type}}>{{type}}</h1>
-            {% elif 'spi' == type %}
-            <h1 id='k'>{{type}}</h1>
-            {% elif 'spi' == type %}
-            <h1 id={{type}}>{{type}}</h1>
-            {% else %}
-            <h1 id={{type}}>{{erro}}</h1>
-            
-            {% endif %}
-           
-
+            </form>
+            {% elif 'semester'==type %} 
+            <form action={{action}} method="POST" class="catainer-form">
+                <div class="form-head" id='Branch'>Branch:<span name="branch" value="1">{{branch}}</span></div>
+                <div class="form-head" id='Semester'>Semester:<span name="semester"></span>{{semester}}</span></div>
+                <div class="form-head">Subjects:</div>
+                                {% for data in sublist%}
+                                <div class="section-box">
+                                    <label for='sublist'>{{data[1]}}</label>
+                                    <select id='sublist' name='sublist'>
+                                        <option value="AP">A+</option>
+                                        <option value="A">A</option>
+                                        <option value="BP">B+</option>
+                                        <option value="B">B</option>
+                                        <option value="CP">C+</option>
+                                        <option value="C">C</option>
+                                        <option value="FP">F+</option>
+                                        <option value="F">F</option>
+                                    </select>
+                                </div>
+                                {% endfor %}
+                                <input name="branch" value='{{branch}}' style="display: none;">
+                                <input name="sem" value='{{semester}}' style="display: none;">
+                                <button type="submit" class="btn">GO</button>
+                            </form>
+               {% elif 'spi' == type %}
+               <div class="section-box">
+                   <h2>SPI/Result is:</h2>
+                   <h3>{{result}}</h3>
+                   <a href="/" class="btn">Home</a>
+                </div>
+                {% else %}
+                    <h1 id={{type}}>{{erro}}</h1>
+                    
+                    {% endif %}
+                </div>
+                    <div class="card-footer" id="gu">
+                        NU COMPUTER SCIENCE ENGINNERING
+                    </div>
+            </div>
         </div>
-        <div class="card-footer" id="gu">
-            NU COMPUTER SCIENCE ENGINNERING
-        </div>
-    </div>
-    </div>
-<footer id="footer">
-        <ul>
-            <li><a href="\">NU</a>|</li>
-            <li><a href="\">Home</a>|</li>
-            <li><a href="\branch">SPI</a>|</li>
+        <footer id="footer">
+            <ul>
+                <li><a href="\">NU</a>|</li>
+                <li><a href="\">Home</a>|</li>
+                <li><a href="\branch">SPI</a>|</li>
 
-        </ul>
-</footer>
+            </ul>
+        </footer>
 
 
 </body>
 <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
 <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script> -->
 <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script> -->
+
 </html>
