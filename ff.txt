@@ -1,0 +1,27 @@
+<!--{% elif f%}
+<h1 id="sem">{{s}}</h1>
+<h1 id="g">Choose Greads:</h1>
+<form action="/SPI2" method="POST" id="my">
+    {% for i in range(n) %}
+    <div id="sub">
+        <label for="cars">{{sub[i]}}:</label>
+        <select id="p" name="car2">
+    <option value="AP">A+</option>
+    <option value="A">A</option>
+    <option value="BP">B+</option>
+    <option value="B">B</option>
+    <option value="CP">C+</option>
+    <option value="C">C</option>
+    <option value="FP">F+</option>
+    <option value="F">F</option>
+    </select> </div>
+    {% endfor %}
+
+    <button type="submit" class="btn btn-primary" id="mi">GO</button>
+</form>
+{% else %}
+<form action="/" id="my">
+    <span class="badge badge-primary" id="ans">SPI:{{ans}}</span>
+    <button type="submit" class="btn btn-primary" id="mi">BACK TO HOME</button>
+</form>
+{% endif %}  -->

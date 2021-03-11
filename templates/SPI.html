@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anteryami University</title>
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
-    <!-- <link rel="stylesheet" type="text/css" href="Home.css"> -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='Home.css') }}">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
+    <link rel="stylesheet" type="text/css" href="../static/Home.css">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='Home.css') }}"> -->
 </head>
 <body>
     <header>
         <div class="top-headding">Anteryami
-            <div style="color: blue; font-weight: bold;">University</div>
+            <span style="color: blue; font-weight: bold;">University</span>
         </div>
 
         <nav>
@@ -21,67 +21,49 @@
                 <ul>
                     <li class="menu_item"><a href="\">Home</a></li>
                     <li class="menu_item"><a href="\SPI">SPI</a></li>
-                    <li class="menu_item"><a href="\SPI">PPI</a></li>
                 </ul>
             </div>
         </nav>
     </header>
-<script>
+<!-- <script>
     console.log('{{t}}')
-</script>
-{% if t %}
-<form action="/SPI" method="POST" id="my">
-    <label for="cars">Choose a Sem:</label>
-    <select id="cars" name="cars">
-    <option value="SEM1">SEM-1</option>
-    <option value="SEM2">SEM-2</option>
-    <option value="SEM3">SEM-3</option>
-    <option value="SEM4">SEM-4</option>
-    <option value="SEM5">SEM-5</option>
-    <option value="SEM6">SEM-6</option>
-    <option value="SEM7">SEM-7</option>
-    <option value="SEM8">SEM-8</option>
-    </select>
-    <button type="submit" class="btn btn-primary" id="mi">GO</button>
-</form>
-{% elif f%}
-<h1 id="sem">{{s}}</h1>
-<h1 id="g">Choose Greads:</h1>
-<form action="/SPI2" method="POST" id="my">
-    {% for i in range(n) %}
-    <div id="sub">
-        <label for="cars">{{sub[i]}}:</label>
-        <select id="p" name="car2">
-    <option value="AP">A+</option>
-    <option value="A">A</option>
-    <option value="BP">B+</option>
-    <option value="B">B</option>
-    <option value="CP">C+</option>
-    <option value="C">C</option>
-    <option value="FP">F+</option>
-    <option value="F">F</option>
-    </select> </div>
-    {% endfor %}
+</script> -->
+<div class="container" id="zeel">
+    <div class="text">
+        <div class="card-header" id="zee">
+            SPI|PPI CALCULATOR
+        </div>
+        <form action="/SPI" method="POST" class="catainer-form">
+            <div class="section-box">
 
-    <button type="submit" class="btn btn-primary" id="mi">GO</button>
-</form>
-{% else %}
-<form action="/" id="my">
-    <span class="badge badge-primary" id="ans">SPI:{{ans}}</span>
-    <button type="submit" class="btn btn-primary" id="mi">BACK TO HOME</button>
-</form>
-{% endif %} 
+                <label for="cars">Choose a Sem:</label>
+                <select id="cars" name="cars">
+                    <option value="SEM1">SEM-1</option>
+                    <option value="SEM2">SEM-2</option>
+                    <option value="SEM3">SEM-3</option>
+                    <option value="SEM4">SEM-4</option>
+                    <option value="SEM5">SEM-5</option>
+                    <option value="SEM6">SEM-6</option>
+                    <option value="SEM7">SEM-7</option>
+                    <option value="SEM8">SEM-8</option>
+                </select>
+            </div>
+            <button type="submit" class="btn">GO</button>
+        </form>
+        <div class="card-footer" id="gu">
+            AU COMPUTER SCIENCE ENGINNERING
+        </div>
+    </div>
+    </div>
 
-<footer>
-    <div class="foo">
+
+<footer id="footer">
         <ul>
             <li><a href="\">AU</a>|</li>
             <li><a href="\">Home</a>|</li>
             <li><a href="\SPI">SPI</a>|</li>
-            <li><a href="\SPI">PPI</a></li>
 
         </ul>
-    </div>
 </footer>
 </body>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

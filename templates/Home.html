@@ -6,47 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anteryami University</title>
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="{{ url_for('static', filename='Home.css') }}">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/Home.css">
 </head>
 <body>
     <header>
-        <div class="top-headding">Anteryami
-            <div style="color: blue; font-weight: bold;">University</div>
+        <div class="top-headding">Niram
+            <span style="color: blue; font-weight: bold;">University</span>
         </div>
 
-        <nav>
-            <div id="navbar">
+        <nav id="navbar">
                 <ul>
                     <li class="menu_item"><a href="\">Home</a></li>
                     <li class="menu_item"><a href="\SPI">SPI</a></li>
-                    <li class="menu_item"><a href="\SPI">PPI</a></li>
                 </ul>
-            </div>
         </nav>
     </header>
-    <div class="card text-center" id="zeel">
-        <div class="card-header" id="zee" style="background-color:red; font-weight: bold; color: white;">
-        SPI|PPI CALCULATOR
+    <div class="container" id="zeel">
+        <div class="text">
+
+            <div class="card-header" id="zee">
+                SPI|PPI CALCULATOR
+            </div>
+            <div class="card-body">
+                <h2 class="card-title">Well Come to Niram University</h2>
+                <p class="card-text">Here you can calculate spi of sem</p>
+                <a href="/SPI" class="btn btn-primary">Go SPI Caluculation</a>
+            </div>
+            <div class="card-footer" id="gu">
+                AU COMPUTER SCIENCE ENGINNERING
+            </div>
+        </div>
     </div>
-    <div class="card-body">
-        <h5 class="card-title">Well Come to Anteryami University</h5>
-        <p class="card-text">The worls dum and dety Collage!!!!</p>
-        <a href="/SPI" class="btn btn-primary">Go SPI Caluculation</a>
-    </div>
-    <div class="card-footer" id="gu" style="background-color: red; font-weight: bold; color:black;">
-        AU COMPUTER SCIENCE ENGINNERING
-    </div>
-    <footer>
-        <div class="foo">
+    <footer id="footer">
             <ul>
-                <li><a href="\">AU</a>|</li>
+                <li><a href="\">NU</a>|</li>
                 <li><a href="\">Home</a>|</li>
                 <li><a href="\SPI">SPI</a>|</li>
-                <li><a href="\SPI">PPI</a></li>
-
             </ul>
-        </div>
     </footer>
 </body>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

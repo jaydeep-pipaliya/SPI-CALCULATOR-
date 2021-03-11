@@ -1,0 +1,152 @@
+/* =========================
+CSS file
+1.Hedder
+2.navbar,footer
+3.container
+4.form
+========================= */
+
+
+body{
+    margin: 0px auto;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    height: 100vh;
+    /* border: 2px solid black; */
+}
+/* =========================
+1.Hedder
+========================= */
+
+.top-headding{
+    padding:1rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* =========================
+2.navbar,footer
+========================= */
+
+#navbar,#footer
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar ul, #footer ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    padding: 1rem 0;
+    width: 100%;
+    margin: 0;
+    background-color: black;
+}
+#navbar a, #footer a{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    font-size: 1.3rem;
+    padding: 0 1rem;
+}
+#navbar a:hover, #footer a:hover{
+    color: rgb(117, 112, 112);
+}
+
+/* =========================
+3.Container
+========================= */
+
+.container{
+    display: grid;
+    min-height: 76.6%;
+    justify-content: center;
+    align-items: center;
+}
+.text{
+    display: flex;
+    min-height: 50%;
+    justify-content: space-between;
+    flex-direction: column;
+    box-shadow: 0px 0px 10px red;
+}
+.card-header,.card-footer{
+    padding: 1rem;
+    color: white;
+    font-size: 1.6rem;
+    font-weight: bolder;
+    background-color: red;
+}
+.card-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    /* font-size: 1rem; */
+}
+.btn{
+    margin-top: 1rem;
+    background-color: #007bff;
+    transition: all .2s ease-out;
+    padding: 0.8rem;
+    text-decoration: none;
+    font-weight: bolder;
+    color: white;
+    border-radius: 3px;
+}
+.btn:hover{
+    box-shadow: 0 0 10px #007bff;
+}
+
+
+/* =========================
+4.form
+========================= */
+.catainer-form{
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    grid-gap: 1.7rem;
+    margin: 10px 0;
+    /* border: 2px solid; */
+}
+.section-box{
+    /* border: 2px solid; */
+}
+.catainer-form label{
+    font-size: 2rem;
+    /* border: 2px solid; */
+    padding: 0 20px;
+    text-decoration: underline;
+    text-transform: capitalize;
+    /* text-rendering: optimizeLegibility; */
+    text-decoration-color: red;
+}
+.catainer-form select{
+    font-size: xx-large;
+}
+.catainer-form .btn{
+    /* margin-bottom: 1; */
+}
+
+@media only screen and (max-width: 500px) {
+   
+    .top-headding,#navbar a,#footer a,.card-footer,.card-header,.container,.catainer-form label,.catainer-form select,.btn{
+        font-size: 1rem;
+    }
+    .card-footer,.card-header{
+        font-size: .8rem;
+
+    }
+    .catainer-form{
+        margin: 2rem 0;
+        grid-gap: 1rem;
+    }
+    #footer ul, #navbar ul{
+        flex-wrap: wrap;
+
+    }
+
+}
