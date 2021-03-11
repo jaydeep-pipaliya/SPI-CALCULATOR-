@@ -1,3 +1,4 @@
+
 Chemical Engineering-BCH
 Semester-1
 2MA101-Liner Algebra-4
@@ -98,7 +99,7 @@ Semester-4
 2CL405-Transportation Engineering-4
 2HS342-Principles of Economics-2
 End
-Semester2-5
+Semester5
 2CL501-Design of Concrete Structures-4
 2CL502-Environmental Engineering-4
 2CL503-Foundation Engineering-4
@@ -230,7 +231,7 @@ Semester-4
 2CS404-Programming for Scientific Computing-3
 2MA402-Probability and Statistics-3
 2HS341-Principles of Management-2
-2CS405-Web Technologies End-2
+2CS405-Web Technologies end-2
 End
 Semester-5
 2CS501-Machine Learning-4
@@ -259,6 +260,3 @@ Semester-7
 End
 Semester-8
 2CSXXX-Major Project/Internship-12
-End
-***
-
