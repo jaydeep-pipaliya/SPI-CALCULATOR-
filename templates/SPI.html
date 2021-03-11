@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anteryami University</title>
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
-    <link rel="stylesheet" type="text/css" href="../static/Home.css">
-    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='Home.css') }}"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="../static/Home.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='Home.css') }}">
 </head>
 <body>
     <header>
@@ -20,7 +19,7 @@
             <div id="navbar">
                 <ul>
                     <li class="menu_item"><a href="\">Home</a></li>
-                    <li class="menu_item"><a href="\SPI">SPI</a></li>
+                    <li class="menu_item"><a href="\branch">SPI</a></li>
                 </ul>
             </div>
         </nav>
@@ -31,44 +30,67 @@
 <div class="container" id="zeel">
     <div class="text">
         <div class="card-header" id="zee">
-            SPI|PPI CALCULATOR
+            SPI CALCULATOR
         </div>
-        <form action="/SPI" method="POST" class="catainer-form">
-            <div class="section-box">
+        <div class="form">
 
-                <label for="cars">Choose a Sem:</label>
-                <select id="cars" name="cars">
-                    <option value="SEM1">SEM-1</option>
-                    <option value="SEM2">SEM-2</option>
-                    <option value="SEM3">SEM-3</option>
-                    <option value="SEM4">SEM-4</option>
-                    <option value="SEM5">SEM-5</option>
-                    <option value="SEM6">SEM-6</option>
-                    <option value="SEM7">SEM-7</option>
-                    <option value="SEM8">SEM-8</option>
-                </select>
-            </div>
-            <button type="submit" class="btn">GO</button>
-        </form>
+
+
+
+            {% if 'branch' == type %}
+
+            <form action={{action}} method="POST" class="catainer-form">
+                <div class="section-box">
+                    <label for=branch>Choose a Branch:</label>
+                    <select id="branch" name="branch">
+                        {% for data in branchlist%}
+                        <option value='{{data}}'>{{data}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="section-box">
+                    <label for=semester>Choose a Semester:</label>
+                    <select id="semester" name="semester">
+                        {% for data in semlist %}
+                        <option value='{{data}}''>{{data}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <button type="submit" class="btn">GO</button>
+                <form>
+
+
+
+            {% elif 'semester' == type %}
+            <h1 id={{type}}>{{type}}</h1>
+            {% elif 'spi' == type %}
+            <h1 id='k'>{{type}}</h1>
+            {% elif 'spi' == type %}
+            <h1 id={{type}}>{{type}}</h1>
+            {% else %}
+            <h1 id={{type}}>{{erro}}</h1>
+            
+            {% endif %}
+           
+
+        </div>
         <div class="card-footer" id="gu">
-            AU COMPUTER SCIENCE ENGINNERING
+            NU COMPUTER SCIENCE ENGINNERING
         </div>
     </div>
     </div>
-
-
 <footer id="footer">
         <ul>
-            <li><a href="\">AU</a>|</li>
+            <li><a href="\">NU</a>|</li>
             <li><a href="\">Home</a>|</li>
-            <li><a href="\SPI">SPI</a>|</li>
+            <li><a href="\branch">SPI</a>|</li>
 
         </ul>
 </footer>
+
+
 </body>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-
-
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script> -->
+<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script> -->
 </html>

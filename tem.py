@@ -2,10 +2,11 @@
 # This file is used to crate Api of niram per sem semester wise data
 # ===================================
 
-f1=open("Nirma_Data.txt","r")
+f1=open("./static/Nirma_Data.txt","r")
 data=f1.read()
 list1=data.split("End")
 persem_list=list(map(lambda x: x.split("\n"),list1))
+# print(persem_list)
 Data_inDic={}
 tem=1
 last=-1
@@ -14,13 +15,14 @@ for i in persem_list:
     if "" in i:
         i.remove("")
     if(i[0][0:8]!="Semester"):
+        # print(i)
         if tem !=1:
             Data_inDic[last]=tem
         last=i[0]
         i.remove(i[0])
         tem={}
     tem[i[0]]=i[1:]
-
+Data_inDic[last]=tem
 for i in Data_inDic:
     # print(i):
     for sem in Data_inDic[i]:

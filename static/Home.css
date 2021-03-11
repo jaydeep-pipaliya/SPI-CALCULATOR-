@@ -127,10 +127,9 @@ body{
 .catainer-form select{
     font-size: xx-large;
 }
-.catainer-form .btn{
-    /* margin-bottom: 1; */
+h4{
+    text-align: center;
 }
-
 @media only screen and (max-width: 500px) {
    
     .top-headding,#navbar a,#footer a,.card-footer,.card-header,.container,.catainer-form label,.catainer-form select,.btn{
