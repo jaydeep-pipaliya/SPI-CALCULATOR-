@@ -41,8 +41,8 @@ def SPI():
     # print(Branch,Semester)
     list_sub=d.Get_Branch_Semester_Sub_List(Branch,Semester)
     # print(list_sub)
-    a='fail'
-    if "F" not in list_sub:  
+    a='Fail'
+    if "F" not in Greadlist:  
         a=g.SPI(list_sub,Greadlist)
     return render_template("SPI.html",type=type,result=a)
 app.run(debug=True)

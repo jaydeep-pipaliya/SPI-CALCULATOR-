@@ -37,7 +37,7 @@
                 {% if 'branch' == type %}
                 <form action={{action}} method="POST" class="catainer-form">
                     <div class="section-box">
-                        <label for=branch>Choose a Branch:</label>
+                        <label for=branch id="a">Choose a Branch:</label>
                         <select id="branch" name="branch">
                             {% for data in branchlist%}
                             <option value='{{data}}'>{{data}}</option>
@@ -45,7 +45,7 @@
                         </select>
                     </div>
                     <div class="section-box">
-                        <label for=semester>Choose a Semester:</label>
+                        <label for=semester id="a">Choose a Semester:</label>
                         <select id="semester" name="semester">
                             {% for data in semlist %}
                             <option value='{{data}}'>{{data}}</option>
@@ -61,7 +61,7 @@
                 <div class="form-head">Subjects:</div>
                                 {% for data in sublist%}
                                 <div class="section-box">
-                                    <label for='sublist'>{{data[1]}}</label>
+                                    <label for='sublist'>{{data[1]}}:</label>
                                     <select id='sublist' name='sublist'>
                                         <option value="AP">A+</option>
                                         <option value="A">A</option>
@@ -69,7 +69,6 @@
                                         <option value="B">B</option>
                                         <option value="CP">C+</option>
                                         <option value="C">C</option>
-                                        <option value="FP">F+</option>
                                         <option value="F">F</option>
                                     </select>
                                 </div>
@@ -79,9 +78,9 @@
                                 <button type="submit" class="btn">GO</button>
                             </form>
                {% elif 'spi' == type %}
-               <div class="section-box">
+               <div class="section-box" style="width:auto; margin:10px 0;  flex-direction: column; align-items: center;">
                    <h2>SPI/Result is:</h2>
-                   <h3>{{result}}</h3>
+                   <h3 class="btn" style="background-color: red;">{{result}}</h3>
                    <a href="/" class="btn">Home</a>
                 </div>
                 {% else %}
@@ -90,16 +89,13 @@
                     {% endif %}
                 </div>
                     <div class="card-footer" id="gu">
-                        NU COMPUTER SCIENCE ENGINNERING
+                        Div c
                     </div>
             </div>
         </div>
         <footer id="footer">
             <ul>
-                <li><a href="\">NU</a>|</li>
-                <li><a href="\">Home</a>|</li>
-                <li><a href="\branch">SPI</a>|</li>
-
+                <li><a>All copyright &copy; Goes to Zeel,Amir and Jaydeep</a></li>
             </ul>
         </footer>
 

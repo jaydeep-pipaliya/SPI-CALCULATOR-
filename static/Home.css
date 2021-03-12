@@ -9,8 +9,7 @@ CSS file
 
 body{
     margin: 0px auto;
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    height: 100vh;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
     /* border: 2px solid black; */
 }
 /* =========================
@@ -21,6 +20,7 @@ body{
     padding:1rem;
     font-size: 2rem;
     text-align: center;
+    height: 5vh;
 }
 
 /* =========================
@@ -32,6 +32,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 10vh;
 }
 
 #navbar ul, #footer ul{
@@ -59,24 +60,26 @@ body{
 ========================= */
 
 .container{
-    display: grid;
-    min-height: 76.6%;
-    /* justify-content: center; */
+    display: flex;
+    justify-content: center;
     align-items: center;
+    /* border:2px solid; */
 }
 .text{
     display: flex;
-    min-height: 50%;
-    width: 100%;
-    justify-content: space-between;
+    width: 90%;
+    /* align-self:/ center; */
+    /* justify-content: space-between; */
     flex-direction: column;
-    box-shadow: 0px 0px 10px red;
+    /* box-shadow: 0px 0px 10px red; */
+    border: 1px solid red;
 }
 .card-header,.card-footer{
     padding: 1rem;
     color: white;
     font-size: 1.6rem;
     font-weight: bolder;
+    text-align: center;
     background-color: red;
 }
 .card-body{
@@ -94,10 +97,13 @@ body{
     text-decoration: none;
     font-weight: bolder;
     color: white;
+    width: 10rem;
+    text-align: center;
     border-radius: 3px;
 }
 .btn:hover{
     box-shadow: 0 0 10px #007bff;
+    cursor: pointer;
 }
 
 
@@ -105,28 +111,47 @@ body{
 4.form
 ========================= */
 .catainer-form{
-    display: grid;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     grid-gap: 1.7rem;
     margin: 10px 0;
     /* border: 2px solid; */
 }
 .section-box{
+    display: flex;
+    justify-content: space-between;
+    width: 30rem;
     /* border: 2px solid; */
 }
 .catainer-form label{
-    font-size: 2rem;
+    font-size: 1.3rem;
     /* border: 2px solid; */
-    padding: 0 20px;
-    text-decoration: underline;
     text-transform: capitalize;
-    /* text-rendering: optimizeLegibility; */
-    text-decoration-color: red;
+    width:20rem;
+    padding: 10px 0;
 }
-.catainer-form select{
-    font-size: xx-large;
+.catainer-form select,.catainer-form option *{
+    font-size: 1.3rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 10rem;
+    outline: none;
+    text-align: center;
+    background: red;
+    color: white;
+    font-weight: bold;
+    padding: 10px 0;
+    border-radius: 6px;
+
+}
+.form-head{
+    font-size: 1.5rem;
+    
+}
+.catainer-form select:hover{
+    cursor: pointer;
 }
 h4{
     text-align: center;
@@ -134,11 +159,26 @@ h4{
 @media only screen and (max-width: 500px) {
    
     .top-headding,#navbar a,#footer a,.card-footer,.card-header,.container,.catainer-form label,.catainer-form select,.btn{
-        font-size: 1rem;
+        font-size: 12px
     }
     .card-footer,.card-header{
         font-size: .8rem;
 
+    }
+    #navbar a,#footer a{
+        font-size: 14px;
+        font-weight: bolder;
+
+    }
+    .btn{
+
+        font-size: 12px;
+        width: 10rem;
+
+
+    }
+    .form-head{
+        font-size: 15px;
     }
     .catainer-form{
         margin: 2rem 0;
@@ -147,6 +187,41 @@ h4{
     #footer ul, #navbar ul{
         flex-wrap: wrap;
 
+    }
+    .catainer-form select{
+        width: 7rem;
+    }
+    #a{
+        width: 5rem;
+    }
+    .catainer-form lable{
+        width: 10rem;
+    }
+    .section-box{
+        width: 20rem;
+    }
+    
+
+}
+
+@media only screen and (max-width: 500px) {
+
+    .catainer-form select{
+        width: 5rem;
+    }
+    #a{
+        width: 3rem;
+    }
+    .catainer-form lable{
+        width: 7rem;
+    }
+    .section-box{
+        width: 15rem;
+    }
+    
+    #footer a{
+        font-size: 12px;
+        padding: 0;
     }
 
 }
