@@ -21,6 +21,7 @@ def Get_Branch_Semester_List(Branch='Chemical Engineering-BCH'):
 
 def Get_Branch_Semester_Sub_List(Branch,Semester):
     list=Get_Branch_Semester_Data(Branch)
+
     # print(list)
     if Semester in list:
         return list[Semester]

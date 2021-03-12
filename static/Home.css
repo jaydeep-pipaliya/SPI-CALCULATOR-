@@ -192,19 +192,19 @@ h4{
         width: 7rem;
     }
     #a{
-        width: 5rem;
+        width: 7rem;
     }
     .catainer-form lable{
         width: 10rem;
     }
     .section-box{
-        width: 20rem;
+        width: 15rem;
     }
     
 
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 300px) {
 
     .catainer-form select{
         width: 5rem;

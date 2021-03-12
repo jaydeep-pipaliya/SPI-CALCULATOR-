@@ -99,7 +99,7 @@ Semester-4
 2CL405-Transportation Engineering-4
 2HS342-Principles of Economics-2
 End
-Semester5
+Semester-5
 2CL501-Design of Concrete Structures-4
 2CL502-Environmental Engineering-4
 2CL503-Foundation Engineering-4
