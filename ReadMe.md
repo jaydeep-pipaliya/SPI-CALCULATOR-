@@ -1,4 +1,4 @@
-# Niram Python Praject Sem-4
+# Nirma Spi Calculator 
 
 ***Roll no***
 
